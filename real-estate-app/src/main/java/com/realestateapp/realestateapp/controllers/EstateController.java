@@ -1,7 +1,6 @@
 package com.realestateapp.realestateapp.controllers;
 
 import com.realestateapp.realestateapp.models.*;
-import com.realestateapp.realestateapp.repositories.base.AddressRepository;
 import com.realestateapp.realestateapp.services.base.EstateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

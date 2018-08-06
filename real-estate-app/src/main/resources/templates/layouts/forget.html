@@ -21,22 +21,45 @@
       <link href="../css/osahan.css" rel="stylesheet">
    </head>
    <body>
-      <!-- 404 Page -->
+    <!-- Inner Header -->
+    <section class="section-padding bg-dark inner-header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12 text-center">
+                     <h1 class="mt-0 mb-3 text-white">Forget</h1>
+                     <div class="breadcrumbs">
+                        <p class="mb-0 text-white"><a class="text-white" href="../../templates/index.html">Home</a>  /  <span class="text-success">Forget</span></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End Inner Header -->
+      <!-- Login -->
       <section class="section-padding">
          <div class="container">
             <div class="row">
-               <div class="col-lg-8 col-md-8 mx-auto text-center">
-                  <h1><img class="img-fluid" src="../img/404.png" alt="404"></h1>
-                  <h1>Sorry! Page not found.</h1>
-                  <p class="land">Unfortunately the page you are looking for has been moved or deleted.</p>
-                  <div class="mt-5">
-                     <a href="../index.html" class="btn btn-success btn-lg"><i class="mdi mdi-home"></i> GO TO HOME PAGE</a>
+               <div class="col-lg-4 col-md-4 mx-auto">
+                  <div class="card padding-card">
+                     <div class="card-body">
+                        <h5 class="card-title mb-4">Reset Password</h5>
+                        <form>
+                           <div class="form-group">
+                              <label>Email address <span class="text-danger">*</span></label>
+                              <input type="email" class="form-control" placeholder="Your Email or Username">
+                           </div>
+                           <button type="submit" class="btn btn-success btn-block">RESET PASSWORD</button>
+                        </form>
+                        <div class="mt-4 text-center">
+                           Don't have an account? <a href="../register.html">Register</a>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
-      <!-- End 404 Page -->
+      <!-- End Login -->
       <!-- Bootstrap core JavaScript -->
       <script src="../vendor/jquery/jquery.min.js"></script>
       <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

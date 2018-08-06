@@ -2,23 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+   <head  th:fragment="site-head">
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Askbootstrap">
-      <meta name="author" content="Askbootstrap">
-      <title>Osahan Land - Bootstrap 4 Light Real Estate Theme</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" th:include="this :: head" th:remove="tag">
+      <title>Real Estate App</title>
       <!-- Favicon Icon -->
       <link rel="icon" type="image/png" href="../images/favicon.png">
       <!-- Bootstrap core CSS -->
-      <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../vendor/bootstrap/css/bootstrap.min.css" th:src="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
       <!-- Material Design Icons -->
-      <link href="../vendor/icons/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+      <link href="../vendor/icons/css/materialdesignicons.min.css" th:src="@{vendor/icons/css/materialdesignicons.min.css}" media="all" rel="stylesheet" type="text/css" />
       <!-- Select2 CSS -->
-      <link href="../vendor/select2/css/select2-bootstrap.css" />
-      <link href="../vendor/select2/css/select2.min.css" rel="stylesheet" />
+      <link href="../vendor/select2/css/select2-bootstrap.css" th:src="@{vendor/select2/css/select2-bootstrap.css}"/>
+      <link href="../vendor/select2/css/select2.min.css" th:src="@{vendor/select2/css/select2.min.css}" rel="stylesheet" />
       <!-- Custom styles for this template -->
-      <link href="../css/osahan.css" rel="stylesheet">
+      <link href="../css/osahan.css" th:src="@{css/osahan.css}" rel="stylesheet">
    </head>
    <body>
       <!-- Inner Header -->
@@ -28,7 +26,7 @@
                <div class="col-md-12 text-center">
                   <h1 class="mt-0 mb-3 text-white">About Us</h1>
                   <div class="breadcrumbs">
-                     <p class="mb-0 text-white"><a class="text-white" href="../index.html">Home</a>  /  <span class="text-success">About Us</span></p>
+                     <p class="mb-0 text-white"><a class="text-white" href="../../templates/index.html">Home</a>  /  <span class="text-success">About Us</span></p>
                   </div>
                </div>
             </div>

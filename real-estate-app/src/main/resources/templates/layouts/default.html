@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head th:fragment="site-head">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" th:include="this :: head" th:remove="tag">
+      <title>Real Estate</title>
+      <!-- Favicon Icon -->
+      <link rel="icon" type="image/png" href="../static/images/favicon.png">
+      <!-- Bootstrap core CSS -->
+      <link href="../static/vendor/bootstrap/css/bootstrap.min.css" th:src="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+      <!-- Material Design Icons -->
+      <link href="../static/vendor/icons/css/materialdesignicons.min.css"  th:src="@{vendor/icons/css/materialdesignicons.min.css}" media="all" rel="stylesheet" type="text/css" />
+      <!-- Select2 CSS -->
+      <link href="../static/vendor/select2/css/select2-bootstrap.css" th:src="@{vendor/select2/css/select2-bootstrap.css}" />
+      <link href="../static/vendor/select2/css/select2.min.css" th:src="@{vendor/select2/css/select2.min.css}" rel="stylesheet" />
+      <!-- Custom styles for this template -->
+      <link href="../static/css/osahan.css"  th:src="@{css/osahan.css}" rel="stylesheet">
+   </head>
+   <body>
+      <!-- Navbar -->
+      <header header th:fragment="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           <div class="container">
+              <a class="navbar-brand text-success logo" href="../../templates/index.html"><i class="mdi mdi-home-map-marker"></i> <strong>Real</strong>Estate</a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 margin-auto">
+                       <li class="nav-item">
+                           <a class="nav-link" href="properties-grid.html" id="navbarDropdownPortfolio" aria-haspopup="true" aria-expanded="false">
+                           Properties
+                           </a>
+                       </li>
+                    <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       My Account
+                       </a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                          <a class="dropdown-item" href="user-profile.html">Profile</a>
+                          <a class="dropdown-item" href="favorite-properties.html">Favorites</a>
+                       </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      About us
+                       </a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                          <a class="dropdown-item" href="about.html">About us</a>
+                          <a class="dropdown-item" href="contact.html">Contact us</a>
+                       </div>
+                    </li>
+                 </ul>
+                 <div class="my-2 my-lg-0">
+                    <ul class="list-inline main-nav-right">
+                       <li class="list-inline-item">
+                          <a class="btn btn-link btn-sm" href="login.html">Sign In</a>
+                       </li>
+                       <li class="list-inline-item">
+                          <a class="btn btn-success btn-sm" href="register.html">Sign Up</a>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+           </div>
+        </nav>
+     </header>
+     <!-- End Navbar -->
+      <!-- Footer -->
+      <footer th: th:fragment="site-footer">
+      <!-- Join Team -->
+      <section class="section-padding bg-dark text-center">
+         <h2 class="text-white mt-0">Join our professional team & agents<br>to start selling your house</h2>
+         <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         <button type="button" class="btn btn-success">Contact Us</button> <button type="button" class="btn btn-outline-success">Read More</button>
+      </section>
+      <!-- End Join Team -->
+      <section class="section-padding footer bg-white">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 col-md-3">
+                  <h4 class="mb-5"><a class="text-success logo" href="../../templates/index.html"><i class="mdi mdi-home-map-marker"></i> <strong>Real Estate</strong></a></h4>
+                  <p>Blvd. Andrey Saharov, Sofia 1784<br>Bulgaria</p>
+                  <p class="mb-0"><a class="text-dark" href="#">+61 525 240 310</a></p>
+                  <p class="mb-0"><a class="text-success" href="#">adriyanyani@gmail.com</a></p>
+                  <p class="mb-0"><a class="text-info" href="#">www.realestatespring.com</a></p>
+               </div>
+               <div class="col-lg-2 col-md-2">
+                  <h6 class="mb-4">COMPANY</h6>
+                  <ul>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="properties-grid.html">Properties</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <ul>
+               </div>
+               <div class="col-lg-2 col-md-2">
+                  <h6 class="mb-4">LEARN MORE</h6>
+                  <ul>
+                  <li><a href="Terms.html">Terms & Conditions</a></li>
+                  <li><a href="user-profile.html">Account</a></li>
+                  <li><a href="FAQ.html">FAQ</a></li>
+                  <ul>
+               </div>
+               <div class="col-lg-4 col-md-4">
+                  <h6 class="mb-4">GET IN TOUCH</h6>
+                  <div class="footer-social">
+                     <a href="#"><i class="mdi mdi-facebook"></i></a>
+                     <a href="#"><i class="mdi mdi-twitter"></i></a>
+                     <a href="#"><i class="mdi mdi-instagram"></i></a>
+                     <a href="#"><i class="mdi mdi-google"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Copyright -->
+      <section class="pt-4 pb-4 text-center">
+         <p class="mt-0 mb-0">© Copyright 2018 Adriyan & Yani. All Rights Reserved</p>
+         <small class="mt-0 mb-0">
+         <a class="text-dark" target="_blank" href="https://github.com/adriyanmihaylov/RealEstateApp">GitHub</a>
+         </small>
+      </section>
+      <!-- End Copyright -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="../static/vendor/jquery/jquery.min.js"></script>
+      <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Contact form JavaScript -->
+      <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+      <script src="../static/js/jqBootstrapValidation.js"></script>
+      <script src="../static/js/contact_me.js"></script>
+      <!-- select2 Js -->
+      <script src="../staitic/vendor/select2/js/select2.min.js"></script>
+      <!-- Custom -->
+      <script src="../static/js/custom.js"></script>
+      </footer>
+      <!-- End Footer -->
+   </body>
+</html>
