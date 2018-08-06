@@ -1,27 +1,13 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Askbootstrap">
-      <meta name="author" content="Askbootstrap">
-      <title>Osahan Land - Bootstrap 4 Light Real Estate Theme</title>
-      <!-- Favicon Icon -->
-      <link rel="icon" type="image/png" href="../images/favicon.png">
-      <!-- Bootstrap core CSS -->
-      <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Material Design Icons -->
-      <link href="../vendor/icons/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-      <!-- Select2 CSS -->
-      <link href="../vendor/select2/css/select2-bootstrap.css" />
-      <link href="../vendor/select2/css/select2.min.css" rel="stylesheet" />
-      <!-- Custom styles for this template -->
-      <link href="../css/osahan.css" rel="stylesheet">
-   </head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="templates/permanent/site-style :: site-head">
+    </head>
    <body>
-      <!-- Inner Header -->
+       <!--Navbar -->
+       <header th:replace="permanent/site-navigation :: site-header">
+       </header>
+       <!-- End Navbar -->
+       <!-- Inner Header -->
       <section class="section-padding bg-dark inner-header">
          <div class="container">
             <div class="row">

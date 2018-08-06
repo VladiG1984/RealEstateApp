@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
-   <head th:replace="layouts/default :: site-head">
-   </head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="permanent/site-style :: site-head">
+  </head>
    <body>
-      <!-- Navbar -->
-      <header th:replace="layouts/default :: site-header">
+       <!--Navbar -->
+      <header th:replace="permanent/site-navigation :: site-header">
      </header>
      <!-- End Navbar -->
       <!-- Main Slider With Form -->
@@ -23,15 +23,6 @@
                               <option>Brazil</option>
                               <option>Cambodia</option>
                               <option>Dominica</option>
-                              <option>France</option>
-                              <option>Guyana</option>
-                              <option>Hong Kong</option>
-                              <option>Ireland</option>
-                              <option>Japan</option>
-                              <option>Malaysia</option>
-                              <option>Nepal</option>
-                              <option>Oman</option>
-                              <option>Peru</option>
                            </select>
                         </div>
                      </div>
@@ -40,9 +31,8 @@
                            <div class="input-group-addon"><i class="mdi mdi-city"></i></div>
                            <select class="form-control select2" name="location">
                               <option disabled="" selected="">Any Status</option>
-                              <option>Heigh </option>
-                              <option>Midium</option>
-                              <option>Normal</option>
+                              <option>For Sale </option>
+                              <option>For Rent</option>
                            </select>
                         </div>
                      </div>
@@ -67,17 +57,11 @@
                         <div class="input-group">
                            <div class="input-group-addon"><i class="mdi mdi-hotel"></i></div>
                            <select class="form-control select2" name="location">
-                              <option disabled="" selected="">Min. Bedrooms</option>
+                              <option disabled="" selected="">Bedrooms</option>
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>8</option>
-                              <option>9</option>
-                              <option>10</option>
+                              <option>4+</option>
                            </select>
                         </div>
                      </div>
@@ -86,16 +70,10 @@
                            <div class="input-group-addon"><i class="mdi mdi-magnify-minus-outline"></i></div>
                            <select class="form-control select2" name="location">
                               <option disabled="" selected="">Min Size</option>
+                              <option>50</option>
                               <option>100</option>
                               <option>200</option>
                               <option>300</option>
-                              <option>400</option>
-                              <option>500</option>
-                              <option>600</option>
-                              <option>700</option>
-                              <option>800</option>
-                              <option>900</option>
-                              <option>1000</option>
                            </select>
                         </div>
                      </div>
@@ -104,16 +82,11 @@
                            <div class="input-group-addon"><i class="mdi mdi-magnify-plus-outline"></i></div>
                            <select class="form-control select2" name="location">
                               <option disabled="" selected="">Max Size</option>
-                              <option>1000</option>
-                              <option>2000</option>
-                              <option>3000</option>
-                              <option>4000</option>
-                              <option>5000</option>
-                              <option>6000</option>
-                              <option>7000</option>
-                              <option>8000</option>
-                              <option>9000</option>
-                              <option>10000</option>
+                               <option>100</option>
+                               <option>200</option>
+                              <option>300</option>
+                              <option>400</option>
+                              <option>500</option>
                            </select>
                         </div>
                      </div>
@@ -125,13 +98,7 @@
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>8</option>
-                              <option>9</option>
-                              <option>10</option>
+                              <option>4+</option>
                            </select>
                         </div>
                      </div>
@@ -158,7 +125,7 @@
                   <div class="card card-list">
                      <a href="#">
                         <span class="badge badge-success">For Sale</span>
-                        <img class="card-img-top" src="../static/img/list/1.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/list/1.png" alt="Card image cap">
                         <div class="card-body">
                            <h5 class="card-title">House in Kent Street</h5>
                            <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i> 127 Kent Sreet, Sydny, NEW 2000</h6>
@@ -178,7 +145,7 @@
                   <div class="card card-list">
                      <a href="#">
                         <span class="badge badge-secondary">For Rent</span>
-                        <img class="card-img-top" src="../static/img/list/2.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/list/2.png" alt="Card image cap">
                         <div class="card-body">
                            <h5 class="card-title">Family House in Hudson</h5>
                            <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i> Hoboken, NJ, USA</h6>
@@ -198,7 +165,7 @@
                   <div class="card card-list">
                      <a href="#">
                         <span class="badge badge-success">For Sale</span>
-                        <img class="card-img-top" src="../static/img/list/3.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/list/3.png" alt="Card image cap">
                         <div class="card-body">
                            <h5 class="card-title">Loft Above The City</h5>
                            <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i> Hope Street (Stop P), London SW11, UK</h6>
@@ -220,7 +187,7 @@
                   <div class="card card-list">
                      <a href="#">
                         <span class="badge badge-danger">For Sale</span>
-                        <img class="card-img-top" src="../static/img/list/4.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/list/4.png" alt="Card image cap">
                         <div class="card-body">
                            <h5 class="card-title">Store Space Greenville</h5>
                            <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i> 250-260 3rd St, Hoboken, NJ 07030, USA</h6>
@@ -240,7 +207,7 @@
                   <div class="card card-list">
                      <a href="#">
                         <span class="badge badge-warning">For Rent</span>
-                        <img class="card-img-top" src="../static/img/list/5.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/list/5.png" alt="Card image cap">
                         <div class="card-body">
                            <h5 class="card-title">Villa in Melbourne</h5>
                            <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i> NJ 07305, USA</h6>
@@ -260,7 +227,7 @@
                   <div class="card card-list">
                      <a href="#">
                         <span class="badge badge-info">For Rent</span>
-                        <img class="card-img-top" src="../static/img/list/6.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/list/6.png" alt="Card image cap">
                         <div class="card-body">
                            <h5 class="card-title">Villa on Hollywood Boulev</h5>
                            <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i> The Village, Jersey City, NJ 07302, USA</h6>
@@ -291,7 +258,7 @@
                <div class="col-lg-8 col-md-8">
                   <div class="card bg-dark text-white card-overlay">
                      <a href="#">
-                        <img class="card-img" src="../static/img/overlay/1.png" alt="Card image">
+                        <img class="card-img" src="img/overlay/1.png" alt="Card image">
                         <div class="card-img-overlay">
                            <h3 class="card-title text-white">New York</h3>
                            <p class="card-text text-white">16 Properties</p>
@@ -302,7 +269,7 @@
                <div class="col-lg-4 col-md-4">
                   <div class="card bg-dark text-white card-overlay">
                      <a href="#">
-                        <img class="card-img" src="../static/img/overlay/2.png" alt="Card image">
+                        <img class="card-img" src="img/overlay/2.png" alt="Card image">
                         <div class="card-img-overlay">
                            <h3 class="card-title text-white">Los Angeles</h3>
                            <p class="card-text text-white">265 Properties</p>
@@ -315,7 +282,7 @@
                <div class="col-lg-4 col-md-4">
                   <div class="card bg-dark text-white card-overlay">
                      <a href="#">
-                        <img class="card-img" src="../static/img/overlay/3.png" alt="Card image">
+                        <img class="card-img" src="img/overlay/3.png" alt="Card image">
                         <div class="card-img-overlay">
                            <h3 class="card-title text-white">Chicago</h3>
                            <p class="card-text text-white">620 Properties</p>
@@ -327,7 +294,7 @@
                <div class="col-lg-8 col-md-8">
                   <div class="card bg-dark text-white card-overlay">
                      <a href="#">
-                        <img class="card-img" src="../static/img/overlay/4.png" alt="Card image">
+                        <img class="card-img" src="img/overlay/4.png" alt="Card image">
                         <div class="card-img-overlay">
                            <h3 class="card-title text-white">Philadelphia</h3>
                            <p class="card-text text-white">28 Properties</p>
@@ -349,7 +316,7 @@
             <div class="row">
                <div class="col-lg-4 col-md-4">
                   <div class="agents-card text-center">
-                     <img class="img-fluid mb-4" src="../static/img/user/1.jpg" alt="">
+                     <img class="img-fluid mb-4" src="img/user/1.jpg" alt="">
                      <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                      <h6 class="mb-0 text-success">- Stave Martin</h6>
                      <small>Buying Agent</small>
@@ -357,7 +324,7 @@
                </div>
                <div class="col-lg-4 col-md-4">
                   <div class="agents-card text-center">
-                     <img class="img-fluid mb-4" src="../static/img/user/2.jpg" alt="">
+                     <img class="img-fluid mb-4" src="img/user/2.jpg" alt="">
                      <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                      <h6 class="mb-0 text-success">- Mark Smith</h6>
                      <small>Selling Agent</small>
@@ -365,7 +332,7 @@
                </div>
                <div class="col-lg-4 col-md-4">
                   <div class="agents-card text-center">
-                     <img class="img-fluid mb-4" src="../static/img/user/3.jpg" alt="">
+                     <img class="img-fluid mb-4" src="img/user/3.jpg" alt="">
                      <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                      <h6 class="mb-0 text-success">- Ryan Printz</h6>
                      <small>Real Estate Broker</small>
@@ -375,72 +342,13 @@
          </div>
       </section>
       <!-- End Trusted Agents -->
-      <!-- Join Team -->
-      <section class="section-padding bg-dark text-center">
-         <h2 class="text-white mt-0">Join our professional team & agents<br>to start selling your house</h2>
-         <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-         <button type="button" class="btn btn-success">Contact Us</button> <button type="button" class="btn btn-outline-success">Read More</button>
-      </section>
-      <!-- End Join Team -->
-      <!-- Footer -->
-      <section class="section-padding footer bg-white">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-4 col-md-3">
-                  <h4 class="mb-5"><a class="text-success logo" href="index.html"><i class="mdi mdi-home-map-marker"></i> <strong>Real Estate</strong></a></h4>
-                  <p>Blvd. Andrey Saharov, Sofia 1784<br>Bulgaria</p>
-                  <p class="mb-0"><a class="text-dark" href="#">+61 525 240 310</a></p>
-                  <p class="mb-0"><a class="text-success" href="#">adriyanyani@gmail.com</a></p>
-                  <p class="mb-0"><a class="text-info" href="#">www.realestatespring.com</a></p>
-               </div>
-               <div class="col-lg-2 col-md-2">
-                  <h6 class="mb-4">COMPANY</h6>
-                  <ul>
-                  <li><a href="layouts/about.html">About us</a></li>
-                  <li><a href="layouts/properties-grid.html">Properties</a></li>
-                  <li><a href="layouts/contact.html">Contact</a></li>
-                  <ul>
-               </div>
-               <div class="col-lg-2 col-md-2">
-                  <h6 class="mb-4">LEARN MORE</h6>
-                  <ul>
-                  <li><a href="layouts/Terms.html">Terms & Conditions</a></li>
-                  <li><a href="layouts/user-profile.html">Account</a></li>
-                  <li><a href="layouts/FAQ.html">FAQ</a></li>
-                  <ul>
-               </div>
-               <div class="col-lg-4 col-md-4">
-                  <h6 class="mb-4">GET IN TOUCH</h6>
-                  <div class="footer-social">
-                     <a href="#"><i class="mdi mdi-facebook"></i></a>
-                     <a href="#"><i class="mdi mdi-twitter"></i></a>
-                     <a href="#"><i class="mdi mdi-instagram"></i></a>
-                     <a href="#"><i class="mdi mdi-google"></i></a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- End Footer -->
-      <!-- Copyright -->
-      <section class="pt-4 pb-4 text-center">
-         <p class="mt-0 mb-0">© Copyright 2018 Adriyan & Yani. All Rights Reserved</p>
-         <small class="mt-0 mb-0">
-         <a class="text-dark" target="_blank" href="https://github.com/adriyanmihaylov/RealEstateApp">GitHub</a>
-         </small>
-      </section>
-      <!-- End Copyright -->
+      <!-- Footer  -->
+      <footer th:replace="permanent/site-footer :: site-footer">
+      </footer>
+      <!-- End Footer  -->
       <!-- Bootstrap core JavaScript -->
-      <script src="../static/vendor/jquery/jquery.min.js"></script>
-      <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- Contact form JavaScript -->
-      <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-      <script src="../static/js/jqBootstrapValidation.js"></script>
-      <script src="../static/js/contact_me.js"></script>
-      <!-- select2 Js -->
-      <script src="../static/vendor/select2/js/select2.min.js"></script>
-      <!-- Custom -->
-      <script src="../static/js/custom.js"></script>
+       <section th:replace="permanent/site-script :: site-script">
+       </section>
       <!-- Google Map Api -->
       <script>
          function initMap() {
