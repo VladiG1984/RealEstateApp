@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+    <head>
+    </head>
+<body>
+    <footer th:fragment="site-footer">
+        <!-- Join Team -->
+        <section class="section-padding bg-dark text-center">
+            <h2 class="text-white mt-0">Join our professional team & agents<br>to start selling your house</h2>
+            <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <button type="button" class="btn btn-success">Contact Us</button> <button type="button" class="btn btn-outline-success">Read More</button>
+        </section>
+        <!-- End Join Team -->
+        <section class="section-padding footer bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-3">
+                        <h4 class="mb-5"><a class="text-success logo" href="../home/index.html"><i class="mdi mdi-home-map-marker"></i> <strong>Real Estate</strong></a></h4>
+                        <p>Blvd. Andrey Saharov, Sofia 1784<br>Bulgaria</p>
+                        <p class="mb-0"><a class="text-dark" href="#">+61 525 240 310</a></p>
+                        <p class="mb-0"><a class="text-success" href="#">adriyanyani@gmail.com</a></p>
+                        <p class="mb-0"><a class="text-info" href="#">www.realestatespring.com</a></p>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <h6 class="mb-4">COMPANY</h6>
+                        <ul>
+                            <li><a th:href="@{/about}">About us</a></li>
+                            <li><a th:href="@{/search}">Properties</a></li>
+                            <li><a th:href="@{/contact}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <h6 class="mb-4">LEARN MORE</h6>
+                        <ul>
+                            <li><a  th:href="@{/terms-and-conditions}">Terms & Conditions</a></li>
+                            <li><a th:href="@{/user/account}">Account</a></li>
+                            <li><a th:href="@{/faqs}">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <h6 class="mb-4">GET IN TOUCH</h6>
+                        <div class="footer-social">
+                            <a href="#"><i class="mdi mdi-facebook"></i></a>
+                            <a href="#"><i class="mdi mdi-twitter"></i></a>
+                            <a href="#"><i class="mdi mdi-instagram"></i></a>
+                            <a href="#"><i class="mdi mdi-google"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Copyright -->
+        <section class="pt-4 pb-4 text-center">
+            <p class="mt-0 mb-0">© Copyright 2018 Adriyan & Yani. All Rights Reserved</p>
+            <small class="mt-0 mb-0">
+                <a class="text-dark" target="_blank" href="https://github.com/adriyanmihaylov/RealEstateApp">GitHub</a>
+            </small>
+        </section>
+        <!-- End Copyright -->
+    </footer>
+</body>
+</html>

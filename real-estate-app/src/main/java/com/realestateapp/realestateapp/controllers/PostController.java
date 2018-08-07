@@ -3,20 +3,20 @@ package com.realestateapp.realestateapp.controllers;
 import com.realestateapp.realestateapp.models.*;
 
 import com.realestateapp.realestateapp.services.base.EstateService;
-import com.realestateapp.realestateapp.viewModels.PostSimpleViewModel;
 import com.realestateapp.realestateapp.viewModels.PostViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.realestateapp.realestateapp.services.base.PostService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController
-@RequestMapping("/api/posts")
+@Controller
 public class PostController {
     private PostService service;
     private EstateService estateService;
@@ -27,8 +27,16 @@ public class PostController {
         this.estateService = estateService;
     }
 
+    @GetMapping(value = "/search")
+    public String searchProperties(Model model) {
+        model.addAttribute("view", "properties/properties-list");
+
+        return "base";
+    }
+
+
     //WORKING
-    @GetMapping(value = "/")
+    @GetMapping(value = "/properties")
     public List<PostViewModel> findAll() {
         return service.findAll()
                 .stream()
@@ -37,7 +45,7 @@ public class PostController {
     }
 
     //WORKING
-    @GetMapping("/get")
+    @GetMapping("/properties/get")
     public Post findById(@RequestParam("id") String stringID) {
         Post ad = null;
         try {
@@ -50,7 +58,7 @@ public class PostController {
     }
 
     //WORKING TRY WITH POST with http://localhost:8080/api/posts/create?title=AddNum1&description=Test1
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/properties/create", method = RequestMethod.POST)
     public ResponseEntity<?> create(@RequestParam("title") String title,
                                     @RequestParam(value = "description", required = false) String description,
                                     @RequestParam("address") String address,
@@ -78,10 +86,10 @@ public class PostController {
     }
 
     //WORKING TRY WITH PUT METHOD with http://localhost:8080/api/posts/update?id=9&title=Updated post&description=Updated Description
-    @RequestMapping(value = "update", method = RequestMethod.PUT)
+    @RequestMapping(value = "properties/update", method = RequestMethod.PUT)
     public ResponseEntity<?> update(@RequestParam("id") String idString,
                                     @RequestParam(value = "title", required = false) String title,
-                                    @RequestParam(value = "description", required = false) String description    ) {
+                                    @RequestParam(value = "description", required = false) String description) {
         System.out.println(title);
         try {
             Post post = service.findById(Long.parseLong(idString));
@@ -94,7 +102,7 @@ public class PostController {
                 post.setDescription(description);
                 service.update(post);
             }
-            if (title!=null){
+            if (title != null) {
                 post.setTitle(title);
                 service.update(post);
             }
@@ -106,7 +114,7 @@ public class PostController {
     }
 
     //WORKING, try with POSTMAN or CURL REQUEST
-    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/properties/delete", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteById(@RequestParam("id") String idString) {
         try {
             if (service.deleteById(Long.parseLong(idString))) {
@@ -118,20 +126,21 @@ public class PostController {
             return new ResponseEntity<>("Error " + e.getMessage() + "!", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @RequestMapping(value = "/latest5", method = RequestMethod.GET)
-    public List<Post> getLatest5(){
+
+    @RequestMapping(value = "/properties/latest5", method = RequestMethod.GET)
+    public List<Post> getLatest5() {
         return service.findLatest5();
     }
 
-    @RequestMapping(value = "/search" , method = RequestMethod.GET)
-    public List<Post> search(@RequestParam(value = "address", required = false) String address,
-                             @RequestParam(value = "material", required = false) String material,
-                             @RequestParam(value = "type", required = false) String type,
-                             @RequestParam(value = "price", required = false) Integer priceFrom,
-                             @RequestParam(value = "price", required = false) Integer priceTo,
-                             @RequestParam(value = "baths", required = false) Integer baths,
-                             @RequestParam(value = "bedrooms", required = false) Integer bedrooms) {
-
-        return service.search(address, material, type, priceFrom, priceTo, baths, bedrooms);
-    }
+//    @RequestMapping(value = "/search" , method = RequestMethod.GET)
+//    public List<Post> search(@RequestParam(value = "address", required = false) String address,
+//                             @RequestParam(value = "material", required = false) String material,
+//                             @RequestParam(value = "type", required = false) String type,
+//                             @RequestParam(value = "price", required = false) Integer priceFrom,
+//                             @RequestParam(value = "price", required = false) Integer priceTo,
+//                             @RequestParam(value = "baths", required = false) Integer baths,
+//                             @RequestParam(value = "bedrooms", required = false) Integer bedrooms) {
+//
+//        return service.search(address, material, type, priceFrom, priceTo, baths, bedrooms);
+//    }
 }

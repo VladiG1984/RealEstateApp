@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <body>
+        <!-- Inner Header -->
+      <section class="section-padding bg-dark inner-header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12 text-center">
+                     <h1 class="mt-0 mb-3 text-white">Log in</h1>
+                     <div class="breadcrumbs">
+                        <p class="mb-0 text-white"><a class="text-white" href="../home/index.html">Home</a>  /  <span class="text-success">Log in</span></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End Inner Header -->
+      <!-- Login -->
+      <section class="section-padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 col-md-4 mx-auto">
+                  <div class="card padding-card">
+                     <div class="card-body">
+                        <h5 class="card-title mb-4">Login</h5>
+                        <form>
+                           <div class="form-group">
+                              <label>Username <span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" placeholder="Username">
+                           </div>
+                           <div class="form-group">
+                              <label>Password <span class="text-danger">*</span></label>
+                              <input type="password" class="form-control" placeholder="Password">
+                           </div>
+                           <div class="form-group">
+                              <div class="custom-control custom-checkbox">
+                                 <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                 <label class="custom-control-label" for="customControlAutosizing">Remember Me</label>
+                              </div>
+                           </div>
+                           <button type="submit" class="btn btn-success btn-block">SIGN IN</button>
+                        </form>
+                        <div class="mt-4 text-center">
+                           <a th:href="@{/forget}">Forget your password?</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- End Login -->
+   </body>
+</html>
+

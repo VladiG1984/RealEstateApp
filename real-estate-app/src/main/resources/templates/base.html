@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="sections/site-style :: site-head">
+    </head>
+    <body>
+        <!--Navbar -->
+        <header th:replace="sections/site-navigation :: site-header">
+        </header>
+        <!-- End Navbar -->
+        <!-- Main -->
+        <main th:include="${view}"></main>
+        <!--End Main-->
+        <!-- Footer  -->
+        <footer th:replace="sections/site-footer :: site-footer">
+        </footer>
+        <!-- End Footer  -->
+        <!-- Bootstrap core JavaScript -->
+        <section th:replace="sections/site-script :: site-script">
+        </section>
+        <!-- Google Map Api -->
+    </body>
+</html>
+
